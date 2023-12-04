@@ -14,7 +14,17 @@ function makeGrid (size) {
             gridColumn.appendChild(gridBox);
         }
         screen.appendChild(gridColumn);
-    }    
+    }  
+      
 }
 
 makeGrid(16);
+
+function changeBgColor() {
+gridBox.classList.add('black');
+}
+
+const gridBoxList = document.querySelectorAll('.gridBox');
+for (let i = 0 ; i < gridBoxList.length; i++) {
+    gridBoxList[i].addEventListener('mouseover', changeBgColor, false);
+}
