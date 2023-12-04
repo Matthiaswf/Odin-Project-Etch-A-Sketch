@@ -11,3 +11,6 @@ function makeGrid ( ) {
 }
 
 makeGrid();
+makeGrid();
+makeGrid();
+makeGrid();
