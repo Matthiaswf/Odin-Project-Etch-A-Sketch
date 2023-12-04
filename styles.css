@@ -50,3 +50,11 @@
   .black {
     background-color: black;
   }
+  
+  .button {
+    height: 50px;
+    width: 150px;
+    margin-bottom: 30px;
+    background-color: transparent;
+    font-weight: bold;
+  }
