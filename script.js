@@ -11,7 +11,7 @@ function makeGrid (size) {
         for (let x = 1; x <= size; x++) {
             let gridBox = document.createElement('div');
             gridBox.classList.add('gridBox');
-            gridBox.style.border = '0.1px solid black';
+            gridBox.style.border = '1px solid black';
             gridBox.innerText = (i * size) + x;
             gridColumn.appendChild(gridBox);
         }
