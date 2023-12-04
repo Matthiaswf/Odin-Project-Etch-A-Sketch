@@ -26,5 +26,7 @@ gridBox.classList.add('black');
 
 const gridBoxList = document.querySelectorAll('.gridBox');
 for (let i = 0 ; i < gridBoxList.length; i++) {
-    gridBoxList[i].addEventListener('mouseover', changeBgColor, false);
+    gridBoxList[i].addEventListener('mouseover', () => {
+        gridBoxList[i].classList.add('black');
+    });
 }
