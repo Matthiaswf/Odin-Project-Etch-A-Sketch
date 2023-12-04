@@ -5,14 +5,19 @@ container.appendChild(canvas);
 
 function makeGrid (size) {
     let screen = document.querySelector('.canvas');
+
     for (let i = 0; i < size; i++) {
+
         let gridColumn = document.createElement('div');
         gridColumn.classList.add( 'gridColumn');
+
         for (let x = 1; x <= size; x++) {
+
             let gridBox = document.createElement('div');
             gridBox.classList.add('gridBox');
             gridColumn.appendChild(gridBox);
         }
+        
         screen.appendChild(gridColumn);
     }  
       
