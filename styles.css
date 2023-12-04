@@ -38,6 +38,10 @@
   }
   
   .canvas>div>* {
-    /* make rows evenly distributed */
+    /* make boxes evenly distributed */
     flex: 1;
+  }
+
+  .gridBox {
+    border: 1px solid black;
   }
