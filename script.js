@@ -17,21 +17,34 @@ function makeGrid (size) {
             gridBox.classList.add('gridBox');
             gridColumn.appendChild(gridBox);
         }
-        
+
         screen.appendChild(gridColumn);
     }  
+        
+        const gridBoxList = document.querySelectorAll('.gridBox');
+        for (let i = 0 ; i < gridBoxList.length; i++) {
+            gridBoxList[i].addEventListener('mouseover', () => {
+                gridBoxList[i].classList.add('black');
+            });
+        }
       
 }
 
-makeGrid(16);
+const playButton = document.querySelector('.button');
+playButton.addEventListener('click', () => {
+    let userInput = prompt('Choose a Number from 1-100');
+    
+    if (userInput > 100 || userInput < 1 ) {
+        alert("Invalid Number chosen");
+    }
 
-function changeBgColor() {
-gridBox.classList.add('black');
-}
+    else {
+        const myNode = document.querySelector('.canvas');
+        while (myNode.firstChild) {
+        myNode.removeChild(myNode.lastChild);
+        }
 
-const gridBoxList = document.querySelectorAll('.gridBox');
-for (let i = 0 ; i < gridBoxList.length; i++) {
-    gridBoxList[i].addEventListener('mouseover', () => {
-        gridBoxList[i].classList.add('black');
-    });
-}
+        makeGrid(userInput);
+        playButton.textContent = 'Play Again!';
+    }
+});
