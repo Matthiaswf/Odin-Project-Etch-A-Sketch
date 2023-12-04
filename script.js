@@ -5,6 +5,9 @@ container.appendChild(canvas);
 
 function makeGrid ( ) {
     let screen = document.querySelector('.canvas');
-    let grid = document.createElement('div');
-    grid.classList.add('gridBox');
+    let gridBox = document.createElement('div');
+    gridBox.classList.add('gridBox');
+    canvas.appendChild(gridBox);
 }
+
+makeGrid();
