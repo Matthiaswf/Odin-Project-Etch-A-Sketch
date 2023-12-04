@@ -9,11 +9,11 @@ function makeGrid (size) {
         let gridColumn = document.createElement('div');
         gridColumn.classList.add( 'gridColumn');
         for (let x = 1; x <= size; x++) {
-            let gridRow = document.createElement('div');
-            gridRow.classList.add('gridRow');
-            gridRow.style.border = '0.1px solid black';
-            gridRow.innerText = (i * size) + x;
-            gridColumn.appendChild(gridRow);
+            let gridBox = document.createElement('div');
+            gridBox.classList.add('gridBox');
+            gridBox.style.border = '0.1px solid black';
+            gridBox.innerText = (i * size) + x;
+            gridColumn.appendChild(gridBox);
         }
         screen.appendChild(gridColumn);
     }    

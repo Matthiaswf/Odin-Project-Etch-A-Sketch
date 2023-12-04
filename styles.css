@@ -32,7 +32,6 @@
 .canvas>div {
     height: auto;
     flex: 1 0 auto;
-  
     /* make columns vertical flexboxes */
     display: flex;
     flex-direction: column;
